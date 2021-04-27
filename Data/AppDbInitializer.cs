@@ -18,8 +18,8 @@ namespace My_books.Data
 
                 if (!context.Books.Any())
                 {
-                    context.Books.AddRange(new Book() 
-                    { 
+                    context.Books.AddRange(new Book()
+                    {
                         Title = "1st Bok Title",
                         Description = "1st Book Description",
                         IsRead = true,
