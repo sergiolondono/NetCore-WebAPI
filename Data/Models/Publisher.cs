@@ -11,7 +11,7 @@ namespace My_books.Data.Models
         public string Name { get; set; }
 
         // Navigations Properties
-        public List<Book> books { get; set; }
+        public List<Book> Books { get; set; }
 
     }
 }
