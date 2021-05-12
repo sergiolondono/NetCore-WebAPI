@@ -16,6 +16,25 @@ namespace My_books.Data.Services
             _context = context;
         }
 
+        public List<Publisher> GetAllPublishers(string sortBy)
+        {
+            var allPublishers = _context.Publishers.OrderBy(n => n.Name).ToList();
+
+            if (!string.IsNullOrEmpty(sortBy))
+            {
+                switch (sortBy)
+                {
+                    case "name_desc":
+                        allPublishers = allPublishers.OrderByDescending(n => n.Name).ToList();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return allPublishers;
+        }
+
         public Publisher AddPublisher(PublisherVM publisher)
         {
             var _publisher = new Publisher()

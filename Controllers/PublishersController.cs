@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using My_books.Data.Models;
 using My_books.Data.Services;
 using My_books.Data.ViewModels;
 using System;
@@ -20,6 +21,20 @@ namespace My_books.Controllers
             _publisherrService = publisherrService;
         }
 
+        [HttpGet("get-all-publishers")]
+        public IActionResult GetAllPublishers(string sortBy)
+        {
+            try
+            {
+                var _result = _publisherrService.GetAllPublishers(sortBy);
+                return Ok(_result);
+            }
+            catch (Exception)
+            {
+                return BadRequest("Sorry, we could not load the publishers");
+            }
+        }
+
         [HttpPost("add-publisher")]
         public IActionResult AddBook([FromBody]PublisherVM publisher)
         {
@@ -35,7 +50,7 @@ namespace My_books.Controllers
         }
 
         [HttpGet("get-publisher-by-id/{id}")]
-        public IActionResult GetPublisherById(int id)
+        public ActionResult<Publisher> GetPublisherById(int id)
         {
             var _response = _publisherrService.GetPublisherById(id);
             if (_response == null)
@@ -43,7 +58,7 @@ namespace My_books.Controllers
                 return NotFound();
             }
 
-            return Ok(_response);
+            return _response;
         }
 
         [HttpDelete("delete-publisher/{id}")]
