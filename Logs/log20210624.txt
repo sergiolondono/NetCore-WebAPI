@@ -1,0 +1,40 @@
+06/24/2021 16:47:36 -05:00 [] - Message: Application started. Press Ctrl+C to shut down.
+06/24/2021 16:47:36 -05:00 [] - Message: Request starting HTTP/2 GET https://localhost:44300/swagger/index.html - -
+06/24/2021 16:47:36 -05:00 [] - Message: Hosting environment: "Development"
+06/24/2021 16:47:36 -05:00 [] - Message: Content root path: "C:\Users\Sergio\Source\Repos\My-books"
+06/24/2021 16:47:37 -05:00 [] - Message: Request finished HTTP/2 GET https://localhost:44300/swagger/index.html - - - 200 - text/html;charset=utf-8 457.3860ms
+06/24/2021 16:47:37 -05:00 [] - Message: Request starting HTTP/2 GET https://localhost:44300/swagger/v1/swagger.json - -
+06/24/2021 16:47:37 -05:00 [] - Message: Request finished HTTP/2 GET https://localhost:44300/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.2965ms
+06/24/2021 16:47:44 -05:00 [] - Message: Request starting HTTP/2 GET https://localhost:44300/api/Publishers/get-all-publishers - -
+06/24/2021 16:47:44 -05:00 [] - Message: Executing endpoint '"My_books.Controllers.PublishersController.GetAllPublishers (My-books)"'
+06/24/2021 16:47:44 -05:00 [] - Message: Route matched with "{action = \"GetAllPublishers\", controller = \"Publishers\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32)" on controller "My_books.Controllers.PublishersController" ("My-books").
+06/24/2021 16:47:44 -05:00 [] - Message: this is just al og in GetAllPublishers
+06/24/2021 16:47:46 -05:00 [] - Message: Entity Framework Core "5.0.5" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+06/24/2021 16:47:47 -05:00 [] - Message: Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+ORDER BY [p].[Name]"
+06/24/2021 16:47:47 -05:00 [] - Message: Executing "OkObjectResult", writing value of type '"My_books.Data.Models.Paging.PaginatedList`1[[My_books.Data.Models.Publisher, My-books, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+06/24/2021 16:47:47 -05:00 [] - Message: Executed action "My_books.Controllers.PublishersController.GetAllPublishers (My-books)" in 2693.5771ms
+06/24/2021 16:47:47 -05:00 [] - Message: Executed endpoint '"My_books.Controllers.PublishersController.GetAllPublishers (My-books)"'
+06/24/2021 16:47:47 -05:00 [] - Message: Request finished HTTP/2 GET https://localhost:44300/api/Publishers/get-all-publishers - - - 200 - application/json;+charset=utf-8 2827.7116ms
+06/24/2021 16:50:29 -05:00 [Information] - Message: Application started. Press Ctrl+C to shut down.
+06/24/2021 16:50:29 -05:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:44300/swagger/index.html - -
+06/24/2021 16:50:29 -05:00 [Information] - Message: Hosting environment: "Development"
+06/24/2021 16:50:29 -05:00 [Information] - Message: Content root path: "C:\Users\Sergio\Source\Repos\My-books"
+06/24/2021 16:50:30 -05:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:44300/swagger/index.html - - - 200 - text/html;charset=utf-8 346.6434ms
+06/24/2021 16:50:30 -05:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:44300/swagger/v1/swagger.json - -
+06/24/2021 16:50:30 -05:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:44300/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 201.8077ms
+06/24/2021 16:50:36 -05:00 [Information] - Message: Request starting HTTP/2 GET https://localhost:44300/api/Publishers/get-all-publishers - -
+06/24/2021 16:50:36 -05:00 [Information] - Message: Executing endpoint '"My_books.Controllers.PublishersController.GetAllPublishers (My-books)"'
+06/24/2021 16:50:36 -05:00 [Information] - Message: Route matched with "{action = \"GetAllPublishers\", controller = \"Publishers\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32)" on controller "My_books.Controllers.PublishersController" ("My-books").
+06/24/2021 16:50:37 -05:00 [Information] - Message: This is just al og in GetAllPublishers
+06/24/2021 16:50:38 -05:00 [Information] - Message: Entity Framework Core "5.0.5" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+06/24/2021 16:50:39 -05:00 [Information] - Message: Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+ORDER BY [p].[Name]"
+06/24/2021 16:50:39 -05:00 [Information] - Message: Executing "OkObjectResult", writing value of type '"My_books.Data.Models.Paging.PaginatedList`1[[My_books.Data.Models.Publisher, My-books, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+06/24/2021 16:50:39 -05:00 [Information] - Message: Executed action "My_books.Controllers.PublishersController.GetAllPublishers (My-books)" in 2757.3614ms
+06/24/2021 16:50:39 -05:00 [Information] - Message: Executed endpoint '"My_books.Controllers.PublishersController.GetAllPublishers (My-books)"'
+06/24/2021 16:50:39 -05:00 [Information] - Message: Request finished HTTP/2 GET https://localhost:44300/api/Publishers/get-all-publishers - - - 200 - application/json;+charset=utf-8 2896.6883ms

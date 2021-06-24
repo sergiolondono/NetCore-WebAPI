@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using My_books.Data.Models;
 using My_books.Data.Services;
 using My_books.Data.ViewModels;
@@ -15,10 +16,12 @@ namespace My_books.Controllers
     public class PublishersController : ControllerBase
     {
         private PublisherService _publisherrService;
+        private readonly ILogger<PublishersController> _logger;
 
-        public PublishersController(PublisherService publisherrService)
+        public PublishersController(PublisherService publisherrService, ILogger<PublishersController> logger)
         {
             _publisherrService = publisherrService;
+            _logger = logger;
         }
 
         [HttpGet("get-all-publishers")]
@@ -26,6 +29,7 @@ namespace My_books.Controllers
         {
             try
             {
+                _logger.LogInformation("This is just al og in GetAllPublishers");
                 var _result = _publisherrService.GetAllPublishers(sortBy, searchString, pageNumber);
                 return Ok(_result);
             }
