@@ -29,7 +29,7 @@ namespace My_books.Controllers
         {
             try
             {
-                _logger.LogInformation("This is just al og in GetAllPublishers");
+                _logger.LogInformation("This is just a log in GetAllPublishers");
                 var _result = _publisherrService.GetAllPublishers(sortBy, searchString, pageNumber);
                 return Ok(_result);
             }

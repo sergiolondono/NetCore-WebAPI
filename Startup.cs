@@ -42,6 +42,7 @@ namespace My_books
             services.AddTransient<BookService>();
             services.AddTransient<AuthorService>();
             services.AddTransient<PublisherService>();
+            services.AddTransient<LogService>();
 
             //// VERSIONING
             //services.AddApiVersioning(config => {
@@ -58,7 +59,7 @@ namespace My_books
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
